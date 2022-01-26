@@ -518,6 +518,10 @@ class IOSFlutterLocalNotificationsPlugin
 
     return await _channel.invokeMethod('initialize', arguments);
   }
+    
+   void setOnSelectNotificationAction(SelectNotificationCallback onSelectNotification){
+    _onSelectNotification = onSelectNotification;
+  }
 
   /// Requests the specified permission(s) from user and returns current
   /// permission status.
