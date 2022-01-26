@@ -98,6 +98,11 @@ class AndroidFlutterLocalNotificationsPlugin
 
     return await _channel.invokeMethod('initialize', arguments);
   }
+    
+      void setOnSelectNotificationAction(SelectNotificationCallback onSelectNotification){
+    _onSelectNotification = onSelectNotification;
+  }
+
 
   /// Schedules a notification to be shown at the specified date and time.
   ///
